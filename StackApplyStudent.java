@@ -20,11 +20,12 @@ class StackApplyStudent
 			System.out.println("3. Display the top Student.");
 			System.out.println("4. Display all Students.");
 			System.out.println("5. Display the size of the stack.");
-			System.out.println("6. Quit.\n\n");
+			System.out.println("6. Display student according to email input");
+			System.out.println("7. Quit.\n\n");
 			System.out.println("Enter your Choice\n");
 			choice=sc.nextInt();
 			
-			if (choice==6)
+			if (choice==7)
 				break;
 			
 			switch(choice)
@@ -36,6 +37,7 @@ class StackApplyStudent
 		      Student e1=  Student.builder()
 		      .id(sc.nextInt())
 		      .name(sc.nextLine())
+			  .email(sc.nextLine())
 		      .build();
 		       st.push(e1);
 				break;
@@ -60,6 +62,22 @@ class StackApplyStudent
 				System.out.println("Size of the stack is "+st.size());
 				
 				break;
+				
+				
+
+                case 6:
+                System.out.println("Enter email to search:");
+                String emailToSearch = sc.next();
+                Student found = st.searchByEmail(emailToSearch);
+                if (found != null) {
+                System.out.println("Found: " + found);
+                } 
+				else {
+                System.out.println("No student found with email: " + emailToSearch);
+                }
+                break;
+
+				
 				
 				default:
 				
