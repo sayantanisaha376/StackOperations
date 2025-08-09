@@ -1,0 +1,12 @@
+import lombok.*;
+import lombok.Builder;
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+@Builder
+
+class StudentPojo
+{
+private int id;
+private String name;
+}
