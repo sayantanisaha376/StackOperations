@@ -86,6 +86,17 @@ class StackArrayStudent
 	   return stackArray[top];
    }
    
+   // Search for a student by email without removing elements
+    public Student searchByEmail(String email) 
+	{
+        for (int i = top; i >= 0; i--) {
+              if (stackArray[i].getEmail().equalsIgnoreCase(email)) {
+            return stackArray[i]; // Found
+        }
+    }
+    return null; // Not found
+}
+
    
 }
 
@@ -116,3 +127,4 @@ class StackArrayStudent
 	
 	
 	
+
