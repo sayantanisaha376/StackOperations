@@ -1,7 +1,7 @@
 // MainApp.java
 import java.util.Scanner;
 
-class MainApp {
+class ValidParenthesisMain {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Exercise ex = new Exercise();
@@ -13,3 +13,4 @@ class MainApp {
         System.out.println("The validity of the input character is : " + result);
     }
 }
+
